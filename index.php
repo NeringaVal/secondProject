@@ -52,6 +52,29 @@
 
 
     ?>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Country</th>
+            <th scope="col">Value</th>
+            <th scope="col">Yearofmanufacture</th>
+            <th scope="col">Material</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php  foreach ($monetos as $moneta) { ?>
+            <tr>
+        
+                <td><?php echo $moneta->getCountry(); ?> </td>
+                <td><?php echo $moneta->getValue(); ?> </td>
+                <td><?php echo $moneta->getYearofmanufacture(); ?> </td>
+                <td><?php echo $moneta->getMaterial(); ?> </td>
+        
+            </tr>
+        <?php } ?>
+    
+        </tbody>
+    </table>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
