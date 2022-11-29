@@ -55,29 +55,37 @@
 
 
     ?>
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">Country</th>
-            <th scope="col">Value</th>
-            <th scope="col">Yearofmanufacture</th>
-            <th scope="col">Material</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php  foreach ($monetos as $moneta) { ?>
-            <tr>
-        
-                <td><?php echo $moneta->getCountry(); ?> </td>
-                <td><?php echo $moneta->getValue(); ?> </td>
-                <td><?php echo $moneta->getYearofmanufacture(); ?> </td>
-                <td><?php echo $moneta->getMaterial(); ?> </td>
-        
-            </tr>
-        <?php } ?>
-    
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Country</th>
+                        <th scope="col">Value</th>
+                        <th scope="col">Yearofmanufacture</th>
+                        <th scope="col">Material</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php  foreach ($monetos as $moneta) { ?>
+                        <tr>
+                    
+                            <td><?php echo $moneta->getCountry(); ?> </td>
+                            <td><?php echo $moneta->getValue(); ?> </td>
+                            <td><?php echo $moneta->getYearofmanufacture(); ?> </td>
+                            <td><?php echo $moneta->getMaterial(); ?> </td>
+                    
+                        </tr>
+                    <?php } ?>
+                
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
 
     <?php 
         $telefonas1 = new Phone("Nokia", 2010, false);
@@ -99,27 +107,36 @@
 
 
     ?>
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">Manufacturer</th>
-            <th scope="col">Year</th>
-            <th scope="col">Model</th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php  foreach ($telefonas as $telefon) { ?>
-            <tr>
-        
-                <td><?php echo $telefon->manufacturer; ?> </td>
-                <td><?php echo $telefon->year; ?> </td>
-                <td><?php echo $telefon->model; ?> </td>
-       
-            </tr>
-        <?php } ?>
-    
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Manufacturer</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Model</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php  foreach ($telefonas as $telefon) { ?>
+                        <tr>
+                    
+                            <td><?php echo $telefon->manufacturer; ?> </td>
+                            <td><?php echo $telefon->year; ?> </td>
+                            <td><?php echo (boolval($telefon->model) ? 'true' : 'false') ; ?> </td>
+                
+                        </tr>
+                    <?php } ?>
+                
+                    </tbody>
+                    
+                </table>
+            </div>
+            <div class="col-3"></div>
+    </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
