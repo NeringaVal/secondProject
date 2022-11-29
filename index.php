@@ -12,6 +12,7 @@
     <?php
         
         include 'Coin.php';
+        include 'Phone.php';
         $moneta1 = new Coin(null, null, null, null);
         $moneta1->setCountry("Lietuva");
         $moneta1->setValue(10);
@@ -44,6 +45,8 @@
 
         
         $monetos = [$moneta1, $moneta2, $moneta3, $moneta4, $moneta5];
+        
+        echo "Pirmas sarasas:"."<br>";
         foreach ($monetos as $moneta) {
             echo $moneta->getCountry(). " " . $moneta->getValue(). " " . $moneta->getYearofmanufacture(). " " . $moneta->getMaterial()."<br>";
         }
@@ -70,6 +73,48 @@
                 <td><?php echo $moneta->getYearofmanufacture(); ?> </td>
                 <td><?php echo $moneta->getMaterial(); ?> </td>
         
+            </tr>
+        <?php } ?>
+    
+        </tbody>
+    </table>
+
+    <?php 
+        $telefonas1 = new Phone("Nokia", 2010, false);
+        $telefonas2 = new Phone("Samsung", 2022, true);
+        $telefonas3 = new Phone("Huawei", 2015, false);
+        $telefonas4 = new Phone("IPhone", 2022, true);
+
+        $telefonas = [$telefonas1, $telefonas2, $telefonas3, $telefonas4];
+    
+    
+    
+    
+        echo "Antras sarasas:"."<br>";
+        foreach ($telefonas as $telefon) {
+            echo $telefon->manufacturer. " " . $telefon->year. " " . $telefon->model."<br>";
+        }
+        
+
+
+
+    ?>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Manufacturer</th>
+            <th scope="col">Year</th>
+            <th scope="col">Model</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php  foreach ($telefonas as $telefon) { ?>
+            <tr>
+        
+                <td><?php echo $telefon->manufacturer; ?> </td>
+                <td><?php echo $telefon->year; ?> </td>
+                <td><?php echo $telefon->model; ?> </td>
+       
             </tr>
         <?php } ?>
     
